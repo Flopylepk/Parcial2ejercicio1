@@ -3,14 +3,19 @@ package ejercicioVeterinaria;
 import javax.swing.JOptionPane;
 
 public class Usuario {
+	//atributos
 	private String nombre;
 	private int edad;
 	private String dni;
+	
+	//constructor
 	public Usuario(String nombre, int edad, String dni) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dni = dni;
 	}
+	
+	//get y set
 	public String getNombre() {
 		return nombre;
 	}
@@ -29,11 +34,14 @@ public class Usuario {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
+	
+	//metodos
 	@Override
 	public String toString() {
 		return "Usuario [nombre=" + nombre + ", edad=" + edad + ", dni=" + dni + "]";
 	}
 	
+	//validaciones
 	public void Registrarse() {
 		nombre=validarCaracteres("ingrese su nombre");
 		edad=validarNumeros("ingrese su edad");

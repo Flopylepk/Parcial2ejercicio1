@@ -98,19 +98,20 @@ public class Main {
 						}
 						break;
 					case 1:
-						//ver veterinario
-						if (veterinario.getNombre().isEmpty()) {
-							JOptionPane.showMessageDialog(null, "EL veterinario no se registro");
-						}else {
-							JOptionPane.showMessageDialog(null, veterinario);
-						}
-						break;
-					case 2:
 						//registrar animales
 						if (cliente.getNombre().isEmpty()) {
 							JOptionPane.showMessageDialog(null, "deve registrarse primero");
 						}else {
 							cliente.RegistrarAnimales(perro, gato, ave);
+						}
+						break;
+					case 2:
+					
+						//ver veterinario
+						if (veterinario.getNombre().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "EL veterinario no se registro");
+						}else {
+							JOptionPane.showMessageDialog(null, veterinario);
 						}
 						break;
 					case 3:

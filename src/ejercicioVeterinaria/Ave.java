@@ -3,13 +3,18 @@ package ejercicioVeterinaria;
 import javax.swing.JOptionPane;
 
 public class Ave extends Mascota{
+	//atributos
 	private String tipo;
 	private boolean alas;
+	
+	//constructor
 	public Ave(String nombre, int edad, String tipo) {
 		super(nombre, edad);
 		this.tipo = tipo;
 		this.alas = true;
 	}
+	
+	//get y set
 	public String getTipo() {
 		return tipo;
 	}
@@ -22,6 +27,8 @@ public class Ave extends Mascota{
 	public void setAlas(boolean alas) {
 		this.alas = alas;
 	}
+	
+	//metodos
 	@Override
 	public String toString() {
 		return "Ave [tipo=" + tipo + ", alas=" + alas + ", toString()=" + super.toString() + "]";

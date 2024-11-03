@@ -3,15 +3,18 @@ package ejercicioVeterinaria;
 import javax.swing.JOptionPane;
 
 public class Mascota {
+	//atributos
 	private String nombre;
 	private int edad;
 	
+	//constructor
 	public Mascota(String nombre, int edad) {
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
 	}
 
+	//get y set
 	public String getNombre() {
 		return nombre;
 	}
@@ -28,6 +31,8 @@ public class Mascota {
 		this.edad = edad;
 	}
 
+	
+	//metodos
 	@Override
 	public String toString() {
 		return "Mascota [nombre=" + nombre + ", edad=" + edad + "]";
@@ -38,6 +43,7 @@ public class Mascota {
 		edad=validarNumeros("ingrese su edad");
 	}
 	
+	//validaciones
 	public static int validarNumeros(String mensaje) {
 		boolean flag ;
 		String num ="" ;

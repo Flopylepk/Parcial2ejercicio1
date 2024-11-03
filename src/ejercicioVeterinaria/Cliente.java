@@ -3,13 +3,16 @@ package ejercicioVeterinaria;
 import javax.swing.JOptionPane;
 
 public class Cliente extends Usuario{
+	//atributos
 	private String apellido;
 
+	//constructor
 	public Cliente(String nombre, int edad, String dni, String apellido) {
 		super(nombre, edad, dni);
 		this.apellido = apellido;
 	}
 
+	//get y set
 	public String getApellido() {
 		return apellido;
 	}
@@ -18,6 +21,8 @@ public class Cliente extends Usuario{
 		this.apellido = apellido;
 	}
 
+	
+	//metodos
 	@Override
 	public String toString() {
 		return "Cliente [apellido=" + apellido + ", toString()=" + super.toString() + "]";
