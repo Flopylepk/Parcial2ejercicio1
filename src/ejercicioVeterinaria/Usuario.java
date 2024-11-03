@@ -40,6 +40,36 @@ public class Usuario {
 		dni=validarCaracteres("ingrese su dni");
 	}
 	
+	public void VerAnimales(Perro perro, Gato gato, Ave ave) {
+		String[] animal= {"Perro", "Gato", "Ave"};
+		int opcion=JOptionPane.showOptionDialog(null, "¿Qué animal quiere ver el registro?", null, 0, 0, null, animal, animal[0]);
+		switch (opcion) {
+		case 0:
+			if (perro.getNombre().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "el perro no fue registrado");
+			}else {
+				JOptionPane.showMessageDialog(null, perro);
+			}
+			break;
+		case 1:
+			if (gato.getNombre().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "el gato no fue registrado");
+			}else {
+				JOptionPane.showMessageDialog(null, gato);
+			}
+			break;
+		case 2:
+			if (ave.getNombre().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "el ave no fue registrado");
+			}else {
+				JOptionPane.showMessageDialog(null, ave);
+			}
+			break;
+
+		
+		}
+	}
+	
 	public static int validarNumeros(String mensaje) {
 		boolean flag ;
 		String num ="" ;
@@ -66,4 +96,5 @@ public class Usuario {
 		}
 		return palabra;
 	}
+	
 }

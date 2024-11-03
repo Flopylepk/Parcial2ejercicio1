@@ -29,22 +29,52 @@ public class Main {
 					opcionV=JOptionPane.showOptionDialog(null, "elija que hacemos", null, 0, 0, null, menuV, menuV[0]);
 					switch (opcionV) {
 					case 0:
-						
+						//registrarse
+						if (veterinario.getNombre().isEmpty()) {
+							veterinario.Registrarse();
+						}else {
+							JOptionPane.showMessageDialog(null, "usted ya se registro");
+						}
 						break;
 					case 1:
-						
+						//ver cliente
+						if (cliente.getNombre().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "el cliente no se registro");
+						}else {
+							JOptionPane.showMessageDialog(null, cliente);
+						}
 						break;
 					case 2:
-	
+						//ver registro de animales
+						if (veterinario.getNombre().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "usted tiene que registrarse primero");
+						}else {
+							veterinario.VerAnimales(perro, gato, ave);
+						}
 						break;
 					case 3:
-	
+						//revisar animales
+						if (veterinario.getNombre().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "usted tiene que registrarse primero");
+						}else {
+							veterinario.Revisaranimales(perro, gato, ave);
+						}
 						break;
 					case 4:
-	
+						//curar animales
+						if (veterinario.getNombre().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "usted tiene que registrarse primero");
+						}else {
+							veterinario.Curar(perro, gato, ave);;
+						}
 						break;
 					case 5:
-	
+						//ver mi registro
+						if (veterinario.getNombre().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "usted tiene que registrarse primero");
+						}else {
+							JOptionPane.showMessageDialog(null, veterinario);
+						}
 						break;
 					case 6:
 						//Salir
